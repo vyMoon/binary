@@ -46,14 +46,11 @@ function search($needle, $dir) {
                     $more = $middle - 1;
                 } elseif ($compare < 0) {
                     $less = $middle + 1;
-                } elseif ($compare == 0) {
+                } elseif ($compare === 0) {
                     return $content[$middle][1];
                 }
-                
             }
-
         }
-
     }
 
     $remain = substr($remain, 4);
@@ -85,13 +82,9 @@ function search($needle, $dir) {
             $more = $middle - 1;
         } elseif ($compare < 0) {
             $less = $middle + 1;
-        } elseif ($compare == 0) {
-
+        } elseif ($compare === 0) {
             return $content[$middle][1];
         }
-        
     }
-
     return 'undef';
-
 }
