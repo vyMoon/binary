@@ -78,13 +78,12 @@ function search2($needle, $dir) {
         }
     }
 
-    $content = $remain;
-    $content = explode($splitter, $content);
-    array_pop($content);
-    for($i = 0; $i < count($content); $i++) {
-        $content[$i] = explode($splitter2, $content[$i]);
+    $remain = explode($splitter, $remain);
+    array_pop($remain);
+    for($i = 0; $i < count($remain); $i++) {
+        $remain[$i] = explode($splitter2, $remain[$i]);
     }
 
-    return binary($content, $needle);
+    return binary($remain, $needle);
 
 }
